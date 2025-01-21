@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
         name="viewport">
     <title>@yield('title') &mdash; Teman Laundri</title>
-
+    @livewireStyles
     <!-- General CSS Files -->
     <link rel="stylesheet"
         href="{{ asset('library/bootstrap/dist/css/bootstrap.min.css') }}">
@@ -52,12 +52,14 @@
 
             <!-- Content -->
             @yield('main')
+            
 
             <!-- Footer -->
             @include('components.footer')
         </div>
     </div>
 
+    @livewireScripts
     <!-- General JS Scripts -->
     <script src="{{ asset('library/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('library/popper.js/dist/umd/popper.js') }}"></script>
