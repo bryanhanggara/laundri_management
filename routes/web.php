@@ -3,8 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Service\CustomerController;
 
 Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+
+Route::prefix('layanan')->group(function(){
+    Route::get('customer', [CustomerController::class, 'index'])->name('customer.index');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

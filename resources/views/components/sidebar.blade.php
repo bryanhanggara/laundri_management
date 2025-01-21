@@ -16,7 +16,7 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Layanan</li>
             <li class="nav-item">
-                <a href="{{route('dashboard')}}"
+                <a href="{{route('customer.index')}}"
                     class="nav-link"><i class="fas fa-user"></i><span>Pelanggan</span></a>
             </li>
             <li class="nav-item">
