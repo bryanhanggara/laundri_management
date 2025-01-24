@@ -19,6 +19,7 @@
                 background: rgba(0, 0, 0, 0.5);
                 justify-content: center;
                 align-items: center;
+                z-index: 9999; 
             }
     
             /* Styling untuk modal box */
@@ -98,7 +99,6 @@
 
 @push('scripts')
     <!-- JS Libraies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <script src="{{ asset('library/simpleweather/jquery.simpleWeather.min.js') }}"></script>
     <script src="{{ asset('library/chart.js/dist/Chart.min.js') }}"></script>

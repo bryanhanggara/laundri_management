@@ -9,10 +9,18 @@
                 <div class="modal-overlay" id="modalOverlay">
                     <div class="modal-box">
                         <span class="close-btn" id="closeModalBtn">&times;</span>
-                        <h2>Formulir</h2>
-                        <form id="popupForm">
-                            <input type="text" placeholder="Nama Anda" required>
-                            <input type="email" placeholder="Email Anda" required>
+                        <h4>Tambah Paket Layanan Laundri</h4>
+                        <form id="popupForm" wire:submit.prevent="store" >
+                            <input type="text" placeholder="Nama Paket" required wire:model="name" class="form-control">
+                            <select wire:model="category" class="form-control">
+                                <option value="">Pilih Kategori</option>
+                                <option value="Express">Express</option>
+                                <option value="Cuci Lipat">Cuci Lipat</option>
+                                <option value="Komplit">Komplit</option>
+                                <option value="Satuan">Satuan</option>
+                            </select>
+                            <input type="text" placeholder="Harga" required wire:model="price" class="form-control">
+                            <textarea wire:model="description" class="form-control mt-2" placeholder="Deskripsi"></textarea>     
                             <button type="submit">Kirim</button>
                         </form>
                     </div>
@@ -21,14 +29,23 @@
             <div class="card-body">
                 
                 <hr>
-                <input class="form-control"
-                    name="name"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    data-width="250"
-                    wire:model.live="search">
-
+                <div class="row">
+                    <div class="col-md-6">
+                            <input class="form-control"
+                        name="name"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                        data-width="250"
+                        wire:model.live="search">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button class="btn btn-primary m-1" wire:click="filterCategory('')">Semua</button>
+                        @foreach ($categories as $item)
+                               <button class="btn btn-warning m-1" wire:click="filterCategory('{{$item}}')">{{$item}}</button>
+                        @endforeach
+                    </div>
+                </div>
                 <br>
 
                 <div class="table-responsive">
