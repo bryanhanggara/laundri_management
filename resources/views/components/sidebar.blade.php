@@ -20,11 +20,11 @@
                     class="nav-link"><i class="fas fa-user"></i><span>Pelanggan</span></a>
             </li>
             <li class="nav-item">
-                <a href="{{route('dashboard')}}"
+                <a href="{{route('package.index')}}"
                     class="nav-link"><i class="fa fa-shopping-cart"></i><span>Riwayat</span></a>
             </li>
             <li class="nav-item">
-                <a href="{{route('dashboard')}}"
+                <a href="{{route('package.index')}}"
                     class="nav-link"><i class="fa fa-tshirt"></i><span>Paket Laundrian</span></a>
             </li>
         </ul>
