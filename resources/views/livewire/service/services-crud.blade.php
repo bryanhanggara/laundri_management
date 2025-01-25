@@ -40,9 +40,9 @@
                         wire:model.live="search">
                     </div>
                     <div class="col-md-6 d-flex justify-content-end">
-                        <button class="btn btn-primary m-1" wire:click="filterCategory('')">Semua</button>
+                        <button class="btn m-1 {{ $selectCategory === '' ? 'btn-primary' : 'btn-secondary' }}" wire:click="filterCategory('')">Semua</button>
                         @foreach ($categories as $item)
-                               <button class="btn btn-warning m-1" wire:click="filterCategory('{{$item}}')">{{$item}}</button>
+                               <button class="btn m-1 {{ $selectCategory === $item ? 'btn-success' : 'btn-warning' }}" wire:click="filterCategory('{{$item}}')">{{$item}}</button>
                         @endforeach
                     </div>
                 </div>

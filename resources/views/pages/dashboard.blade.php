@@ -97,28 +97,32 @@
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="card card-statistic-1 card-square">
-                                <div class="bg-primary d-flex justify-content-center align-items-center card-icon-circle mt-5">
-                                    <i class="fa fa-bolt fa-2x text-white"></i>
-                                </div> 
-                                <div class="card-wrap">
-                                    <div class="card-body">
-                                        EXPRESS
+                            <a href="{{route('order.product', 'express')}}">
+                                <div class="card card-statistic-1 card-square">
+                                    <div class="bg-primary d-flex justify-content-center align-items-center card-icon-circle mt-5">
+                                        <i class="fa fa-bolt fa-2x text-white"></i>
+                                    </div> 
+                                    <div class="card-wrap">
+                                        <div class="card-body">
+                                            EXPRESS
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="card card-statistic-1 card-square">
-                                <div class="bg-primary d-flex justify-content-center align-items-center card-icon-circle mt-5">
-                                    <i class="fa fa-tshirt fa-2x text-white"></i>
-                                </div> 
-                                <div class="card-wrap">
-                                    <div class="card-body">
-                                        CUCI LIPAT
+                            <a href="{{route('order.product', 'cuci lipat')}}">
+                                <div class="card card-statistic-1 card-square">
+                                    <div class="bg-primary d-flex justify-content-center align-items-center card-icon-circle mt-5">
+                                        <i class="fa fa-tshirt fa-2x text-white"></i>
+                                    </div> 
+                                    <div class="card-wrap">
+                                        <div class="card-body">
+                                            CUCI LIPAT
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="card card-statistic-1 card-square">

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Order\OrderController;
 use App\Http\Controllers\Service\CustomerController;
 use App\Http\Controllers\Service\ServicesController;
 
@@ -11,6 +12,10 @@ Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 Route::prefix('layanan')->group(function(){
     Route::get('customer', [CustomerController::class, 'index'])->name('customer.index');
     Route::get('paket-layanan', [ServicesController::class, 'index'])->name('package.index');
+});
+
+Route::prefix('order')->group(function(){
+    Route::get('/produk/{category}',  [OrderController::class, 'index'])->name('order.product');
 });
 
 Route::middleware('auth')->group(function () {

@@ -14,7 +14,7 @@ class ServicesCrud extends Component
 
     public $confirmDeleteId;
 
-    public $selectCategory;
+    public $selectCategory = '';
 
     use WithPagination; 
     
